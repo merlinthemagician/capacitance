@@ -64,7 +64,7 @@ capfindPeaks=function(fitA, onsets=capfindStepOnset(fitA)) {
     })
 }
 
-## Finds first local maxima after each step onset
+## Finds first local minima after each step onset
 capfindLows=function(fitA, max=capfindPeaks(fitA)) {
     sapply (X=max, FUN=function(i0) {
         capfindStepLow(fitA,i0)
